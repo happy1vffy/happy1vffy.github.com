@@ -1,0 +1,40 @@
+        /* 공통서식 */ 
+        @charset "utf-8";
+        .wrap { width:100%; height:100%; }
+        .hd { width:100%; height:240px; position:absolute; z-index:100; }
+        #con { width:100%; height:100%;}
+        .ft { width: 100%; height:240px; }
+        .hdwrap { width:1200px; margin:0 auto; height:160px;}
+        .page { clear:both; height:100%; position:relative; }
+        .proTitle1 { font-family: 'Noto Sans KR', sans-serif; font-size:28px; line-height:1.8px; text-align:center; }
+        .proTitle2 { font-family: 'Jeju Myeongjo', serif; font-size:24px; line-height:3; text-align:center; }
+        .midTitle { font-family: 'Jeju Myeongjo', serif; font-size:30px; line-height:3; text-align:center; }
+        .pageTitle { font-family: 'Noto Sans KR', sans-serif; font-size:20px; line-height:300px; text-align:center; font-weight: 600;}
+        .more { display:block; width:120px; line-height:2.4; text-align:center; background-color:#fff; color:#225ca5;}
+        .detail { display:block; width:120px; line-height:2.4; text-align:center; background-color:#fff; color:#225ca5; }
+        .proBox2 li span {display:block; width:42px; height: 42px;}
+        .sns1 { }
+        .tnb ul a { padding-left:20px; background-repeat:no-repeat; background-position:left center; color:#9d9d9d; font-size:0.5;}
+        .login { background-image:url(./images/login_icon.png); }
+        .join { background-image:url(./images/join_icon.png); }
+        .face { background-image:url(./images/ft_facebook.png); background-size:16px; }
+        .blog { background-image:url(./images/ft_blog.png); background-size:16px; }
+        .insta { background-image:url(./images/ft_insta.png); background-size:16px; }
+        .happy { background-image:url(./images/icon_hp.png); background-size:16px; }
+        
+        /* 세부 영역의  각 설정 = 배치 */
+        /* 헤더 영역 설정 */
+        .tnb { widows: 100%; height:30px; clear:both; margin-top:5px; padding-left:20px; padding-right:20px; }
+        .tnb .left { float:left; }
+        .tnb .right { float:right; }
+        .tnb li { float:left; padding-right:12px; }
+        .gnb { background:#225ca5; width:100%; height:80px; left:0px; top:30px; z-index:100; background-size:100% 100%; position:fixed; }
+        .logo { display:block; float:left; padding-left:300px; margin-top:10px; }
+        #menu { float:left; margin-left:120px; line-height: 40px; }
+        #menu li { float:left; padding:0px 60px; position: relative; }
+        #menu li a { color:#fff; line-height:80px; }
+        #menu li a:hover { color:#f44d41; }
+        #menu li .sub { width: 194px; display: none; left:0; text-align:center; position: absolute; background: rgba(34,92,165,0.5);}
+        #menu li:hover .sub { display: block;}
+        #menu li .sub li { clear: both; }
+        #menu li .sub li a { line-height: 36px; }

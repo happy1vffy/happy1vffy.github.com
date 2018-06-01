@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃</title>
+    <style>
+        * { margin:0; padding:0;}
+        body,html { width:100%; height: 100%;}
+        ul { list-style:none;}
+        a { text-decoration:none;}
+        img {border: 0;}
+        .container { 
+            width:100%;
+            height:100%;
+        }
+        .page { 
+            clear:both; 
+            width:100%;
+            height:100%; 
+            position:relative; 
+            overflow:hidden;
+        }
+        .title {
+            text-align:center; 
+            color:#fff; 
+            line-height:4;
+        }
+        .coment { 
+            padding:25px; 
+            color:#eee;
+        }
+        #page1 { background:#225ca5; }
+        #page2 { background:#2291a5; }
+        #page3 { background:#22a572; }
+        #page4 { background:#8ea522; }
+        #page5 { background:#a52222; }
+        
+        .grid1 { 
+            margin:20px auto; 
+            width:700px;
+        }
+        .grid1 li { 
+            float:left; 
+            box-shadow:0px 0px 10px #f60;
+            position:relative;
+        }
+        .grid1 li.first { 
+            margin-right:100px;
+        }
+        .grid1 li a img { 
+            display:block; 
+            border:2px solid #f00; 
+            box-sizing:border-box; 
+            width:300px;
+            height:400px;
+        }
+        .ico {
+            display:block; 
+            width:60px; 
+            height:60px; 
+            border-radius:32px; 
+            overflow:hidden;
+            position:absolute; 
+            top:20px; 
+            right:20px; 
+        }
+        .col { color:#fff; 
+            display:block; 
+            float:left; 
+            width:200px; 
+            margin-left:15px; 
+            margin-right:15px; 
+        }
+        .col:nth-of-type(8n+1) { clear: both; margin-left: 20px; }
+        .proTitle { text-align: center; font-size: 1.1em; line-height: 2.4;}
+        .proComent { white-space: nowrap; line-height: 2.4; font-size: 14px; overflow: hidden; padding: 10px; text-overflow: ellipsis; }
+        .col img { width: 200px; height: auto; }
+        
+        .grid2 { position: relative; width: 960px; height: 480px; margin: 60px auto; }
+        .grid2 a {display: block; position: absolute; }
+        .box1 { top:0; left:0; width:480px; height:240px;}
+        .box2 { top:240px; width:240px; height:240px;}
+        .box2.item1 { left:0;}
+        .box2.item2 { left:240px;}
+        .box4 { top:0; right:0; width: 480px; height: 480px; }
+        .box5 { top:480px; left:0; width: 960px; height: 240px; }
+        
+        #vs { width: 960px;height: 520px; margin: 30px auto; overflow: hidden;}
+        #imgBox { width: 400%; height: 480px; margin-left: 0; transition:1s; }
+        #imgBox li {float: left; width: 960px; height: 480px; position: relative; }
+        .titBox { color: #fff; position: absolute; top: 150px; left:0; width: 100%;}
+        .banTitle { text-align: center; width: 100%;}
+        #btnBox { width: 58px; height: 8px; margin: 12px auto; }
+        #btnBox li { margin-right: 4px; float: left}
+        #btnBox .btn { 
+            display:block; 
+            width:8px; 
+            height:8px; 
+            outline:0; 
+            border:0; 
+            background:#333; 
+            border-radius:5px; 
+            text-indent:-9999px; 
+            border:1px solid transparent; 
+            cursor: pointer;
+        }
+        .more {
+            position:absolute; 
+            width:120px; 
+            display:block; 
+            line-height:40px; 
+            text-align:center; 
+            background:#A9F5D0; 
+            border-radius:21px; 
+            bottom:50px; 
+            right:50px; 
+            color:#fff; 
+        }
+        #ra1:checked ~ #vs #imgBox { margin-left: 0;} 
+        #ra2:checked ~ #vs #imgBox { margin-left: -960px;}
+        #ra3:checked ~ #vs #imgBox { margin-left: -1920px;}
+        #ra4:checked ~ #vs #imgBox { margin-left: -2880px;}
+        
+        #ra1:checked ~ #vs #btnBox .item1 { background: #F5BCA9; border: 1px solid #fff; }
+        #ra2:checked ~ #vs #btnBox .item2 { background: #F5BCA9; border: 1px solid #fff; }
+        #ra3:checked ~ #vs #btnBox .item3 { background: #F5BCA9; border: 1px solid #fff; }
+        #ra4:checked ~ #vs #btnBox .item4 { background: #F5BCA9; border: 1px solid #fff; }
+        #ra1, #ra2, #ra3, #ra4 { display: none; }
+        
+        #sitemap { width: 1000px; margin: 30px auto;}
+        .mainCate {clear: both; width: 100%;}
+        .mainCate > li { width: 20%; float: left;}
+        .cate { display: block; text-align: center; color:#fff; line-height: 2.8;}
+        .subCate a { color:bisque; display: block; line-height: 3; padding-left: 75px; }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <section class="page" id="page1">
+           <h1 class="title">첫 페이지</h1>
+           <p class="coment">내용1</p>
+           <ul class="grid1">
+              <!-- li*2>a>img -->
+               <li class="first">
+                   <a href="">
+                       <img src="http://placehold.it/300x400/fff/333" alt="">
+                   </a>
+                   <span class="ico">
+                       <img src="http://placehold.it/60x60/333/fff" alt="">
+                   </span>
+               </li>
+               <li class="last">
+                   <a href="">
+                       <img src="http://placehold.it/300x400/fff/333" alt="">
+                   </a>
+                   <span class="ico">
+                           <img src="http://placehold.it/60x60/333/fff" alt="">
+                   </span>
+               </li>
+           </ul>
+       </section>
+       <section class="page" id="page2">
+           <h1 class="title">둘 페이지</h1>
+           <a href="" class="col">
+               <img src="./twice/img01.jpg" alt="">
+               <h3 class="proTitle">트와이스1</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img02.jpg" alt="">
+               <h3 class="proTitle">트와이스2</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img03.jpg" alt="">
+               <h3 class="proTitle">트와이스3</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img04.jpg" alt="">
+               <h3 class="proTitle">트와이스4</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img05.jpg" alt="">
+               <h3 class="proTitle">트와이스5</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img06.jpg" alt="">
+               <h3 class="proTitle">트와이스6</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img07.jpg" alt="">
+               <h3 class="proTitle">트와이스7</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img08.jpg" alt="">
+               <h3 class="proTitle">트와이스8</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img09.jpg" alt="">
+               <h3 class="proTitle">트와이스9</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+            <a href="" class="col">
+               <img src="./twice/img10.jpg" alt="">
+               <h3 class="proTitle">트와이스10</h3>
+               <p class="proComent">트와이스는 제대로 된 한국의 걸그룹입니다.</p>
+           </a>
+               
+               
+       </section>
+       <section class="page" id="page3">
+           <h1 class="title">셋 페이지</h1>
+           <div class="grid2">
+               <a href="" class="box1">
+                   <img src="http://placehold.it/480x240/A9D0F5/fff">
+               </a>
+               <a href="" class="box2 item1">
+                   <img src="http://placehold.it/240x240/F6CEEC/fff">
+               </a>
+               <a href="" class="box2 item2">
+                   <img src="http://placehold.it/240x240/A9F5D0/fff">
+               </a>
+               <a href="" class="box4">
+                   <img src="http://placehold.it/480x480/D8F781/fff">
+               </a>
+               <a href="" class="box5">
+                   <img src="http://placehold.it/960x240/F5BCA9/fff">
+               </a>
+           </div>
+       </section>
+       <section class="page" id=page4>
+           <h1 class="title">넷 페이지</h1>
+           <input type="radio" name="ra" id="ra1" checked/>
+           <input type="radio" name="ra" id="ra2" />
+           <input type="radio" name="ra" id="ra3" />
+           <input type="radio" name="ra" id="ra4" />
+           <figure id="vs">
+               <ul id="imgBox">
+                   <li>
+                       <img src="./tt/future01.jpg" alt="960x480">
+                       <div class="titBox">
+                       <h1 class="banTitle"></h1>
+                       </div>
+                       <a href="" class="more"><span>more</span></a>
+                       
+                   </li>
+                   <li>
+                       <img src="./tt/future02.jpg" alt="960x480">
+                       <div class="titBox">
+                       <h1 class="banTitle"></h1>
+                       </div>
+                        <a href="" class="more"><span>more</span></a>
+                   </li>
+                   <li>
+                       <img src="./tt/future03.jpg" alt="960x480">
+                       <div class="titBox">
+                       <h1 class="banTitle"></h1>
+                       </div>
+                        <a href="" class="more"><span>more</span></a>
+                   </li>
+                   <li>
+                       <img src="./tt/future04.jpg" alt="960x480">
+                       <div class="titBox">
+                       <h1 class="banTitle"></h1>
+                       </div>
+                        <a href="" class="more"><span>more</span></a>
+                   </li>
+               </ul>
+                <ul id="btnBox">
+                   <li>
+                       <label for="ra1" class="btn item1"></label>
+                   </li>
+                    <li>  
+                       <label for="ra2" class="btn item2"></label>
+                    </li>
+                    <li>
+                       <label for="ra3" class="btn item3"></label>
+                    </li>
+                    <li>
+                       <label for="ra4" class="btn item4"></label>
+                   </li>
+               </ul>
+           </figure>
+
+           
+       </section>
+       <section class="page" id=page5>
+           <h1 class="title">오 페이지</h1>
+           <nav id="sitemap">
+               <ul class="mainCate">
+                   <li class="item1">
+                       <h2 class="cate">메뉴1</h2>
+                       <ul class="subCate">
+                           <li><a href="">메뉴11</a></li>
+                           <li><a href="">메뉴12</a></li>
+                           <li><a href="">메뉴13</a></li>
+                           <li><a href="">메뉴14</a></li>
+                           <li><a href="">메뉴15</a></li>
+                       </ul>
+                   </li>
+                   <li class="item2">
+                       <h2 class="cate">메뉴2</h2>
+                       <ul class="subCate">
+                           <li><a href="">메뉴21</a></li>
+                           <li><a href="">메뉴22</a></li>
+                           <li><a href="">메뉴23</a></li>
+                       </ul>
+                   </li>
+                   <li class="item3">
+                       <h2 class="cate">메뉴3</h2>
+                       <ul class="subCate">
+                           <li><a href="">메뉴31</a></li>
+                           <li><a href="">메뉴32</a></li>
+                           <li><a href="">메뉴33</a></li>
+                           <li><a href="">메뉴34</a></li>
+                           <li><a href="">메뉴35</a></li>
+                           <li><a href="">메뉴36</a></li>
+                           <li><a href="">메뉴37</a></li>
+                       </ul>
+                   </li>
+                   <li class="item4">
+                       <h2 class="cate">메뉴4</h2>
+                       <ul class="subCate">
+                           <li><a href="">메뉴41</a></li>
+                           <li><a href="">메뉴42</a></li>
+                           <li><a href="">메뉴43</a></li>
+                           <li><a href="">메뉴44</a></li>
+                       </ul>
+                   </li>
+                   <li class="item5">
+                       <h2 class="cate">메뉴5</h2>
+                       <ul class="subCate">
+                           <li><a href="">메뉴51</a></li>
+                           <li><a href="">메뉴52</a></li>
+                           <li><a href="">메뉴53</a></li>
+                           <li><a href="">메뉴54</a></li>
+                           <li><a href="">메뉴55</a></li>
+                           <li><a href="">메뉴56</a></li>
+                       </ul>
+                   </li>
+               </ul>
+           </nav>
+           
+       </section>
+   </div>
+    
+</body>
+</html>

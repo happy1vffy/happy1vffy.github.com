@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HaaSE COFFEE에 오신 것을 환영합니다.</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <!--[if lt IE 9]>
+        <script src="html5shiv.js"></script>
+    <[endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .page:after {clear: both; }
+        .page {
+            background-image: url(./images/sub1_top.png); 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin-top: 0px; }
+        #page1 {background-image: url(./images/sub1_bg1.png)}
+        #page2 {background-image: url();}
+        .pageTitle { color:#fff; padding-top: 120px; }
+        .page .left, .page .right { position: absolute; 220px; z-index: 15; display: block; width: auto; height: 40px; background-repeat: no-repeat; line-height: 40px; color: antiquewhite; }
+        .page .left { left: 150px; padding-left: 60px; background-position: left center; background-image: url();}
+        .page .right { right: 150px; padding-right: 60px; background-position: right center; border-image: url();}
+        #page2 { background-color: #999;}
+        .ckitem { display: none;}
+        .bread {clear: both; border-top: 1px solid #bababa; margin-top: 14px; height: 42px; width: 100%; position: relative; border-bottom: 1px solid #bababa;}
+        
+        .bread .home, .bread .selcate, .bread .selcur { display: block; font-size: 16px; padding: 0px 15px; color:#fff; float: left; line-height: 42px; margin-left:750px; }
+        
+        .bread .selcate, .bread .selcur {padding-left: 10px; margin-left: 0px;}
+        .bread .home:after, .bread .selcate:after { content: "/"; padding-left: 15px; }
+        .cate, .curpage {position: relative; float: left;}
+        .cateGroup, .curGroup { position: absolute; top:0; left: 0;z-index: 16; background: #fff; border: 1px solid #333; display: none;}
+        .ckitem:checked~.cateGroup { display: block;}
+        .ckitem:checked~.curGroup { display: block;}
+        
+        .tbitem1, .tbitem2 { display:none;}
+        .btnGroup { clear: both; width: 100%;padding-left: 200px;height: 100px;border-bottom: 1px solid #bababa; }
+        .btnGroup li { float: left; margin: 20px;}
+        .btnGroup label { display:block; padding:0px 15px; line-height:32px; border-radius:17px; border:1px solid #666; color: #666; background: #fff; font-size:14px; cursor:pointer; }
+        .tbitem1:checked~.btnGroup .item1 label { background:#225ca5; color: #fff; border:1px solid #225ca5; }
+        .tbitem2:checked~.btnGroup .item2 label { background:#225ca5; color: #fff; border:1px solid #225ca5; }
+        .conBox {clear:both;}
+        .item1 { color: #fff; }
+        
+        .proComent {text-align: center;}
+      
+        
+    </style>
+    <link rel="stylesheet" href="ft.css">
+    <script></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">
+        <div class="hdWrap">
+            <nav class="tnb">
+                <ul class="left">
+                    <li><a href="login.html" class="login">로그인</a>
+                    </li>
+                    <li><a href="join.html" class="join">회원가입</a>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li><a href="https://www.facebook.com" class="face">Facebook</a>
+                    </li>
+                    <li><a href="http://cafe.naver.com/hasecoffee" class="blog">Blog</a>
+                    </li>
+                    <li><a href="https://gramrix.com/tag/아즈커피" class="insta">Instagram</a>
+                    </li>
+                    <li><a href="http://www.happypointcard.com" class="happy">HappyPoint</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="gnb">
+                <a href="index.html" class="logo"><img src="./images/logo.png" alt="로고"></a>
+                <ul id="menu">
+                    <li><a href="intro.html"><h2>HaaSE COFFEE</h2></a>
+                        <ul class="sub">
+                            <li><a href="">브랜드소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="product.html"><h2>MENU</h2></a>
+                        <ul class="sub">
+                            <li><a href="">coffee</a></li>
+                            <li><a href="">beverage</a></li>
+                            <li><a href="">food</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="event.html"><h2>EVENT</h2></a>
+                        <ul class="sub">
+                            <li><a href="">진행중인이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="store.html"><h2>STORE</h2></a>
+                        <ul class="sub">
+                            <li><a href="">매장안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="costomer.html"><h2>COSTOMER</h2></a>
+                        <ul class="sub">
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <a href="" class="lnk1"><span></span></a> -->
+            </nav>
+        </div>
+        </header>
+        <section id="con">
+            <div class="page" id="page1">
+                <div class="pageWrap">
+                    <h2 class="pageTitle">브랜드 소개</h2>
+                    <a href="#page2" class="right">커피&컬쳐</a>
+                    <div class="bread">
+                        <a href="index3.html" class="home">HOME</a>
+                        <div class="cate">
+                           <input type="checkbox" id="cateck" class="ckitem">
+                           <label for="cateck" class="selcate">HaaSE COFFEE</label>
+                           <ul class="cateGroup">
+                               <li><a href="sub1.html"></a>HaaSE COFFEE</li>
+                               <li><a href="sub2.html"></a>MENU</li>
+                               <li><a href="sub3.html"></a>EVENT</li>
+                               <li><a href="sub4.html"></a>STORE</li>
+                               <li><a href="sub5.html"></a>COSTOMER</li>
+                           </ul>                           
+                        </div>
+                        <div class="curpage">
+                            <input type="checkbox" id="curck" class="ckitem">
+                            <label for="curck" class="selcur">브랜드 소개</label>
+                            <ul class="curGroup">
+                                <li><a href="sub1.html#page1">브랜드 소개</a></li>
+                                <li><a href="sub1.html#page2">커피&컬쳐</a></li>
+                            </ul>
+                        </div>    
+                    </div>
+                    <div id="tabGroup1">
+                        <input type="radio" name="tg1" id="tg11" class="tbitem1" checked>
+                        <input type="radio" name="tg1" id="tg12" class="tbitem1" >
+                        <ul class="btnGroup">
+                            <li class="item1">
+                                <label for="tg11" class="btn1">아즈커피와 자블럼의 만남</label>
+                            </li>
+                            <li class="item2">
+                                <label for="tg12" class="btn1">자메이카 블루마운틴 커피</label>
+                            </li>
+                        </ul>
+                        <ul class="conBox">
+                            <li class="item1">
+                                <h2 class="proTitle1"></h2>
+                                <h3 class="proTitle2">2010년,<br>
+                                아즈커피의 이야기는 시작되었습니다.</h3>
+                                <p class="proComent">자블럼 전문 커피숍 아즈커피<br>
+                                .<br>
+                                .<br>
+                                .<br>
+                                자블럼은 자메이카의 블루 마운틴(Blue Mountain)을 <br>
+                                로스팅하여 포장까지 마친 완제품 커피입니다.<br>
+
+                                자메이카의 블루 마운틴(Blue Mountain) 커피 재배 농가 중 <br>
+                                MBCF(Mavis Bank Central Factory)에서 생산하는 커피로<br>
+                                수확은 8월~9월경이고 습식법(Wet Method)으로 가공합니다.<br>
+
+                                전문 로스트 마스터(Roast Master)에 의해 수작업으로 로스팅(Roasting)되는데 <br>
+                                시티(City)와 풀 시티(Full City) 로스팅 중간 정도가 일반적입니다.<br>
+                                깊고 풍부한 향을 갖고 있으며 강하지 않은 신맛과 단맛이 조화롭게 어우러져 있습니다.</p>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                <div class="page" id="page2">
+                    <div class="pageWrap">
+                    <a href="#page2" class="left">브랜드 소개</a>
+                    <h2 class="pageTitle">커피&컬쳐</h2>
+                    </div>
+                    
+                    
+                </div>
+                    <ul class="imgBox">
+                        <li class="item1">
+                            <div class="Ban1">  
+                                <img src="" alt="" class="img">
+                            </div>
+                            <div class="Ban2">
+                                <img src="" alt="" class="img">
+                            </div>
+                            <div class="Ban3">
+                                <img src="" alt="" class="img">
+                            </div>
+                            <!-- <div class="titBox">
+                                <img src="./images/button1.png" alt="" class="tit">
+                            </div> -->
+                        </li>
+                        <li class="item2">
+                            <div class="Ban">
+                                <img src="" alt="" class="img">
+                            </div>
+                            <div class="titBox">
+                                <img src="" alt="" class="tit">
+                            </div>
+                        </li>
+                        <li class="item3">
+                            <div class="lBan">
+                                <img src="" alt="" class="img">
+                            </div>
+                            <div class="rBan">
+                                <img src="" alt="" class="img">
+                            </div>
+                            <div class="titBox">
+                                <img src="" alt="" class="tit">
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="more">
+                        <span><h4></h4></span></a>
+         
+            </div>
+            
+            
+            
+           
+            <footer class="ft">
+            <div class="ftWrap">
+                <nav class="fnb">
+                    <ul>
+                        <li><a href="">포인트</a></li>
+                        <li><a href="" class="active">개인정보 처리방침</a></li>
+                        <li><a href="">영상정보처리기기운영·관리방침</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">윤리신고</a></li>
+                        <li><a href="">센터거래희망사전등록</a></li>
+                    </ul>
+                    <p class="cp">
+                            <td style="line-height:18px">
+                            <span>대전 서구 대덕대로 182 Tel. 042-487-7006</span><br>
+                            <span>COPYRIGHT © 2018 HaaSE COFFEE. ALL RIGHTS RESERVED</span>
+                    </p>
+                </nav>
+                <nav class="snb">
+                    <ul>
+                        <li><a href="" title="facebook">
+                            <img width="70%" height="70%" src="./images/ft_facebook.png" alt="페이스북">
+                            </a></li>
+                        <li><a href="http://cafe.naver.com/hasecoffee" title="blog">
+                            <img  width="70%" height="70%" src="./images/ft_blog.png" alt="블로그">
+                        </a></li>
+                        <li><a href="" title="insta">
+                            <img  width="70%" height="70%" src="./images/ft_insta.png" alt="인스타그램"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>          
+        </section>
+    </div>
+          <a href="index.html" class="toTop">
+          <span>TOP</span>
+          </a>  
+    
+</body>
+</html>
